@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather News AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🌤 Weather + 📰 News + 🤖 AI</h1>
+
+    <div class="container">
+
+        <!-- Weather -->
+        <div class="card">
+            <h2>Weather</h2>
+
+            <input
+                type="text"
+                id="city"
+                placeholder="Enter City"
+            >
+
+            <button onclick="getWeather()">
+                Search
+            </button>
+
+            <div id="weather"></div>
+
+        </div>
+
+        <!-- News -->
+
+        <div class="card">
+
+            <h2>Top News</h2>
+
+            <button onclick="getNews()">
+                Load News
+            </button>
+
+            <div id="news"></div>
+
+        </div>
+
+    </div>
+
+    <!-- AI -->
+
+    <div class="ai">
+
+        <h2>🤖 AI Summary</h2>
+
+        <button onclick="generateSummary()">
+            Generate Summary
+        </button>
+
+        <div id="summary"></div>
+
+    </div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
