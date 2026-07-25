@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Story Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>AI Story Generator</h1>
+
+        <div class="input-box">
+            <label>Story Topic</label>
+            <input
+                type="text"
+                id="topic"
+                placeholder="Enter a topic..."
+            >
+        </div>
+
+        <div class="input-box">
+            <label>Story Type</label>
+
+            <select id="storyType">
+                <option>Adventure</option>
+                <option>Horror</option>
+                <option>Fantasy</option>
+                <option>Funny</option>
+                <option>Sci-Fi</option>
+                <option>Mystery</option>
+            </select>
+        </div>
+
+        <button id="generateBtn">
+            Generate Story
+        </button>
+
+        <div class="output">
+            <h2>Your Story</h2>
+
+            <div id="story">
+                Your AI-generated story will appear here...
+            </div>
+
+            <button id="copyBtn">
+                Copy Story
+            </button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
