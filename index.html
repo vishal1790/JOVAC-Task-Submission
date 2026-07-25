@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+            color:#222;
+            transition:0.3s;
+        }
+
+        /* Navbar */
+        nav{
+            background:#0077cc;
+            color:white;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:15px 25px;
+        }
+
+        .left{
+            display:flex;
+            align-items:center;
+            gap:20px;
+        }
+
+        .menu{
+            font-size:25px;
+            cursor:pointer;
+        }
+
+        button{
+            padding:8px 15px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        /* Sidebar */
+        .sidebar{
+            position:fixed;
+            top:0;
+            left:-220px;
+            width:220px;
+            height:100%;
+            background:#333;
+            transition:.3s;
+            padding-top:70px;
+        }
+
+        .sidebar a{
+            display:block;
+            color:white;
+            text-decoration:none;
+            padding:15px 20px;
+        }
+
+        .sidebar a:hover{
+            background:#555;
+        }
+
+        .show{
+            left:0;
+        }
+
+        /* Home */
+        .home{
+            text-align:center;
+            padding:80px 20px;
+        }
+
+        /* Footer */
+        footer{
+            background:#0077cc;
+            color:white;
+            text-align:center;
+            padding:15px;
+            position:fixed;
+            bottom:0;
+            width:100%;
+        }
+
+        /* Dark Mode */
+        .dark{
+            background:#1a1a1a;
+            color:white;
+        }
+
+        .dark nav,
+        .dark footer{
+            background:#111;
+        }
+
+        .dark .sidebar{
+            background:#222;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</div>
+
+<nav>
+
+    <div class="left">
+        <span class="menu" onclick="toggleBar()">☰</span>
+        <h2>My Website</h2>
+    </div>
+
+    <button onclick="changeMode()">Dark / Light</button>
+
+</nav>
+
+<div class="home">
+    <h1>Welcome to Home Page</h1>
+    <p>This page contains a Navbar, Toggle Bar, Footer, and Dark/Light Mode.</p>
+</div>
+
+<footer>
+    ©️ 2026 My Website
+</footer>
+
+<script>
+function toggleBar(){
+    document.getElementById("sidebar").classList.toggle("show");
+}
+
+function changeMode(){
+    document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
